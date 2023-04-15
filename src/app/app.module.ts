@@ -3,16 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListadoComponent } from './components/listado/listado.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
+
+// INICIO SERVICIOS
+import{ CargarScriptsService } from "./cargar-scripts.service";
+// FIN SERVICIOS
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListadoComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CargarScriptsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
