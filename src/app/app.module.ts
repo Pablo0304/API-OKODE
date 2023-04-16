@@ -7,7 +7,8 @@ import { ListadoComponent } from './components/listado/listado.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 
 // INICIO SERVICIOS
-import{ CargarScriptsService } from "./cargar-scripts.service";
+import{ CargaScriptsService } from "./carga-scripts.service";
+import { PasarDatosService } from "./pasar-datos.service";
 // FIN SERVICIOS
 
 @NgModule({
@@ -21,7 +22,8 @@ import{ CargarScriptsService } from "./cargar-scripts.service";
     AppRoutingModule
   ],
   providers: [
-    CargarScriptsService
+    CargaScriptsService,
+    PasarDatosService
   ],
   bootstrap: [AppComponent]
 })

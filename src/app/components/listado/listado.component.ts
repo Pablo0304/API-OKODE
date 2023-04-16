@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CargarScriptsService } from "../../cargar-scripts.service";
+import { CargaScriptsService } from "../../carga-scripts.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listado',
@@ -8,8 +9,8 @@ import { CargarScriptsService } from "../../cargar-scripts.service";
 })
 export class ListadoComponent {
 
-  constructor( private _CargarScripts:CargarScriptsService ){
-    _CargarScripts.Carga(["peticiones"]);
+  constructor( private _CargaScripts:CargaScriptsService, private router: Router ){
+    _CargaScripts.Carga(["peticiones"]);
   }
 
 }
