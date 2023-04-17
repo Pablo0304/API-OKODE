@@ -1,12 +1,15 @@
-<div class="main">
-  <img id="imgee">
+<div class="main" *ngIf="movie != undefined">
+  <img id="img" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
   <div class="info">
-    <h3 id="titulo" class="titulo">Titlefhdeggghfghjghjghjggnfnfgnfgnhjghjgnfgnfnfgnfgnuidfgdfghdfgdjbvj</h3>
+    <h3 id="titulo" class="titulo">{{movie.title}} <span style="font-size: 30px;">({{movie.original_language}})</span></h3>
     <div class="datos">
-      <div id="fecha">00/00/0000</div>
-      <div id="idioma">()</div>
-      <div id="valoracion">valoracion</div>
+      <div id="fecha">{{movie.release_date}}</div>
+      <div class="valoracion" style="background-image: {{getColor(movie.vote_average)}};">
+        <p id="valor">{{movie.vote_average}}</p>
+      </div>
+      <div id="votos">({{movie.vote_count}})</div>
     </div>
-    <div class="descr">dd</div>
+    <div class="descr">{{movie.overview}}</div>
+    <p-button label="Volver" styleClass="p-button-secondary p-button-rounded p-button-raised" (click)="volver()" id="volver"></p-button>
   </div>
 </div>

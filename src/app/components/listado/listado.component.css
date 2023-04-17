@@ -46,4 +46,38 @@
   font-size: 13px;
   justify-content: flex-start;
 }
+
+.marco{
+  display: flex;
+  align-items: center;
+  width: 65%;
+  margin-bottom: 10px;
+  border-style: outset;
+  border-color: aqua;
+}
+
+#img{
+  width: 85px;
+  height: 113px;
+}
+
+#titulo{
+  margin-left: 5%;
+  cursor: default;
+}
+
+.valoracion{
+  margin-right: 5px;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  height: 35px;
+  width: 35px;
+}
+
+#valor{
+  font-size: 17px;
+  margin-left: 3px;
+  margin-top: 18%;
+  cursor: default;
+}
 /* FIN GRID */

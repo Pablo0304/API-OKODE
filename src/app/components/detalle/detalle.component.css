@@ -9,17 +9,17 @@
 }
 
 /* INICIO FOTO */
-#imgee{
-  width: 200px;
+#img{
+  width: 300px;
   flex-shrink: 0;
   margin-right: 5%;
   margin-left: 60%;
+  border-radius: 10px;
 }
 /* FIN FOTO */
 
 /* INICIO INFO */
 .info{
-  border: 1px solid #000;
   width: 1000px;
   flex-shrink: 0;
   display: flex;
@@ -27,34 +27,58 @@
 }
 
 .titulo{
-  border: 1px solid #000;
-  font-size: 30px;
+  font-size: 40px;
   font-family: Helvetica;
 }
 
 .datos{
-  border: 1px solid #000;
+  margin-top: -4%;
   display: flex;
   justify-content: flex-start;
+  font-size: 20px;
 }
 
 #fecha{
-  margin-left: 10px;
   margin-right: 5px;
+  margin-top: 5px;
 }
 
-#idioma{}
-
-#valoracion{
+.valoracion{
   margin-left: auto;
   margin-right: 10px;
+  background-repeat: no-repeat;
+  height: 35px;
+  width: 35px;
+}
+
+#valor{
+  font-size: 17px;
+  margin-left: 3px;
+  margin-top: 18%;
+  cursor: default;
+}
+
+#votos{
+  font-size: 14px;
+  align-self: self-end;
+  margin-bottom: 6px;
+  margin-left: -10px;
 }
 
 .descr{
+  margin-top: 4%;
   margin-left: 10px;
-  border: 1px solid #000;
+  margin-right: 10px;
   font-size: 15px;
   font-family: Helvetica;
+}
+
+#volver{
+  margin-left: auto;
+  position: fixed;
+  top: 95%;
+  left: 125%;
+  transform: translate(-50%, -50%);
 }
 /* FIN INFO */
 

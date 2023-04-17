@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CargaScriptsService } from "../../carga-scripts.service";
 import { PasarDatosService } from "../../pasar-datos.service";
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalle',
@@ -10,16 +10,32 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetalleComponent {
 
-  datos: any;
+  movie: any;
+  loading: boolean = false;
 
-  constructor( private _CargaScripts:CargaScriptsService, private route: ActivatedRoute ){
-    _CargaScripts.Carga(["scripts"]);
+  constructor( private _CargaScripts:CargaScriptsService, private router: Router, private pasarDatos: PasarDatosService ){
+    //_CargaScripts.Carga(["scripts"]);
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.datos = params['datos'];
-    });
+    this.movie = this.pasarDatos.movie;
+    if(this.movie == undefined){   // Si se ha recargado la página...a la ventana de inicio
+      this.router.navigate(['/']);
+    }
+  }
+
+  getColor(vote: number): string{
+    if(vote < 5){
+      return 'url(../../../assets/photos/val-rojo.png)';
+    } else if(vote < 6.5){
+      return 'url(../../../assets/photos/val-naranja.png)';
+    } else if(vote < 8.5){
+        return 'url(../../../assets/photos/val-amarillo.png)';
+    }  else {return 'url(../../../assets/photos/val-verde.png)';}
+  }
+
+  volver(){
+    this.router.navigate(['/']);   // Botón volver...
   }
 
 }

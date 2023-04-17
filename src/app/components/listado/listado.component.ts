@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CargaScriptsService } from "../../carga-scripts.service";
+import { PasarDatosService } from "../../pasar-datos.service";
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { API_URL } from "../../../environments/environment";
@@ -14,18 +15,22 @@ export class ListadoComponent {
   movies: any[] = [];
   query: any;
 
-  constructor( private _CargaScripts:CargaScriptsService, private router: Router, private http: HttpClient ){
+  constructor( private _CargaScripts:CargaScriptsService, private router: Router, private http: HttpClient, private pasarDatos: PasarDatosService ){
     _CargaScripts.Carga(["scripts"]);
   }
 
   getMovies(){
     this.http.get(`${API_URL}&query=${this.query}`).subscribe(
       (response: any) => {
+
+        // INICIO CAMBIAR CAMPOS
         for (let a = 0; a < response.results.length; a++) {
           response.results[a].vote_average = response.results[a].vote_average.toFixed(1);
+          response.results[a].original_language = response.results[a].original_language.toUpperCase();
         }
+        // FIN CAMBIAR CAMPOS
+
         this.movies = response.results;
-        console.log(this.movies);
       },
       (error) => {
         console.log(error);
@@ -33,7 +38,7 @@ export class ListadoComponent {
     );
   }
 
-  getColor(vote: number){
+  getColor(vote: number): string{
     if(vote < 5){
       return 'url(../../../assets/photos/val-rojo.png)';
     } else if(vote < 6.5){
@@ -47,6 +52,16 @@ export class ListadoComponent {
     if (event.key === 'Enter') {
       this.getMovies();
     }
+  }
+
+  detalle(i: number){
+    // INICIO PASAR DATOS
+    this.pasarDatos.movie = this.movies[i];
+    // FIN PASAR DATOS
+
+    // INICIO CAMBIAR RUTA
+    this.router.navigate(['/movie']);
+    // FIN CAMBIAR RUTA
   }
 
 }

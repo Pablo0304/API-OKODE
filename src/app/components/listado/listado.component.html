@@ -3,13 +3,12 @@
   <input type="image" src="../../../assets/photos/search.png" class="search" (click)="getMovies()">
 </div>
 <img *ngIf="movies.length == 0" src="../../../assets/photos/OKODE.png" id="logo" class="logo">
-<div *ngFor="let movie of movies" id="grid" class="grid">
-  <div style="display: flex; align-items: center; width: 65%; margin-bottom: 10px; border-style: outset; border-color: aqua;">
-    <img style="width: 85px; height: 113px;" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
-    <h3 style="margin-left: 5%; cursor: default;">{{movie.title}}</h3>
-    <div style="margin-right: 5px; margin-left: auto; background-image: {{getColor(movie.vote_average)}}; background-repeat: no-repeat; height: 35px; width: 35px;">
-      <p style="font-size: 17px; margin-left: 3px; margin-top: 6px; cursor: default;">{{movie.vote_average}}</p>
+<div *ngFor="let movie of movies; let i = index" id="grid" class="grid">
+  <div (click)="detalle(i)" class="marco">
+    <img id="img" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
+    <h3 id="titulo">{{movie.title}}</h3>
+    <div class="valoracion" style="background-image: {{getColor(movie.vote_average)}}; ">
+      <p id="valor">{{movie.vote_average}}</p>
     </div>
-    <div style="visibility: hidden; height: 20px; width: 20px;">{{movie.overview}}</div>
   </div>
 </div>

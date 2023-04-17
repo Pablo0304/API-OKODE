@@ -6,20 +6,8 @@ import { Subject } from 'rxjs';
 })
 export class PasarDatosService {
 
+  movie: any;
+
   constructor() { }
-
-  private datosSubject = new Subject<any>();
-
-  enviarDatos(datos: any) {
-    this.datosSubject.next(datos);
-  }
-
-  obtenerDatos() {
-    return this.datosSubject.asObservable();
-  }
-
-  public exponerEnvioDatos() {
-    (window as any).enviarDatos = this.enviarDatos.bind(this);
-  }
 
 }
