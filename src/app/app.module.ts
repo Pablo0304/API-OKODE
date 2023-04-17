@@ -8,7 +8,9 @@ import { DetalleComponent } from './components/detalle/detalle.component';
 
 // INICIO SERVICIOS
 import{ CargaScriptsService } from "./carga-scripts.service";
+import { HttpClientModule } from '@angular/common/http';
 import { PasarDatosService } from "./pasar-datos.service";
+import { FormsModule } from '@angular/forms';
 // FIN SERVICIOS
 
 @NgModule({
@@ -19,7 +21,9 @@ import { PasarDatosService } from "./pasar-datos.service";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     CargaScriptsService,

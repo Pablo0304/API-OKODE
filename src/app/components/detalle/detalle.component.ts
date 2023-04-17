@@ -13,7 +13,7 @@ export class DetalleComponent {
   datos: any;
 
   constructor( private _CargaScripts:CargaScriptsService, private route: ActivatedRoute ){
-    _CargaScripts.Carga(["peticiones"]);
+    _CargaScripts.Carga(["scripts"]);
   }
 
   ngOnInit() {
