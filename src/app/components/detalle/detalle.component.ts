@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class DetalleComponent {
 
   movie: any;
-  loading: boolean = false;
 
   constructor( private _CargaScripts:CargaScriptsService, private router: Router, private pasarDatos: PasarDatosService ){
     //_CargaScripts.Carga(["scripts"]);

@@ -20,10 +20,13 @@
 
 /* INICIO INFO */
 .info{
+  border-style: outset;
+  border-color: aqua;
   width: 1000px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 .titulo{
@@ -76,7 +79,7 @@
 #volver{
   margin-left: auto;
   position: fixed;
-  top: 95%;
+  top: 90%;
   left: 125%;
   transform: translate(-50%, -50%);
 }

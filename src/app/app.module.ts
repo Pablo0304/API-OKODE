@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListadoComponent } from './components/listado/listado.component';
@@ -14,7 +13,9 @@ import { PasarDatosService } from "./pasar-datos.service";
 import { FormsModule } from '@angular/forms';
 // FIN SERVICIOS
 
+// INICIO PRIMENG
 import { ButtonModule } from 'primeng/button';
+// FIN PRIMENG
 
 @NgModule({
   declarations: [

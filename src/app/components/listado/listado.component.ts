@@ -16,7 +16,7 @@ export class ListadoComponent {
   query: any;
 
   constructor( private _CargaScripts:CargaScriptsService, private router: Router, private http: HttpClient, private pasarDatos: PasarDatosService ){
-    _CargaScripts.Carga(["scripts"]);
+    //_CargaScripts.Carga(["scripts"]);
   }
 
   getMovies(){
