@@ -70,14 +70,15 @@
   margin-right: 5px;
   margin-left: auto;
   background-repeat: no-repeat;
+  background-position: center;
   height: 35px;
   width: 35px;
 }
 
 #valor{
   font-size: 17px;
-  margin-left: 3px;
-  margin-top: 18%;
+  margin-left: 5px;
+  margin-top: 16%;
   cursor: default;
 }
 /* FIN GRID */
