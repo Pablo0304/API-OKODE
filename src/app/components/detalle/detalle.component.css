@@ -10,7 +10,7 @@
 
 /* INICIO FOTO */
 #img{
-  width: 300px;
+  width: 30%;
   flex-shrink: 0;
   margin-right: 5%;
   margin-left: 60%;
@@ -22,7 +22,7 @@
 .info{
   border-style: outset;
   border-color: aqua;
-  width: 1000px;
+  width: 73%;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;

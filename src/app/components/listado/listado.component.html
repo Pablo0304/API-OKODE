@@ -7,7 +7,7 @@
   <div (click)="detalle(i)" class="marco">
     <img id="img" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
     <h3 id="titulo">{{movie.title}}</h3>
-    <div class="valoracion" style="background-image: {{getColor(movie.vote_average)}}; ">
+    <div class="valoracion" style="background-image: {{getColor(movie.vote_average)}};">
       <p id="valor">{{movie.vote_average}}</p>
     </div>
   </div>

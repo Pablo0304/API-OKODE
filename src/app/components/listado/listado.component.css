@@ -76,9 +76,11 @@
 }
 
 #valor{
+  height: 100%;
   font-size: 17px;
-  margin-left: 5px;
-  margin-top: 16%;
   cursor: default;
+  left: 50%;
+  top: 50%;
+  transform: translate(12%, -20%);
 }
 /* FIN GRID */
