@@ -132,14 +132,14 @@
                     Consiste en un m&eacute;todo en Typescript:
                     <pre [innerHTML]="cargaScripts"></pre>
                     Al cual se llama importando el archivo Typescript desde el constructor del componente que queremos que importe dicho archivo JavaScript. <br>
-                    (Finalmente solo lo he usado en la Documentaci&oacute;n pero es perfectamente utilizable)
+                    (Finalmente no lo he usado pero es perfectamente funcional)
                 </li>
             </ul>
             <ul>
                 <li>PASAR DATOS: <br>
                     De esta forma tan sencilla he pasado los datos de una ventana a otra: <br>
-                    Simplemente se crea un servicio con un objeto, se le pasa el objeto a la instancia creada por este componente y se cambia de ruta. <code>this.pasarDatos.movie = this.movies[i];</code> <br>
-                    Luego para recabar el objeto desde el otro componente se hace igual que cuando se lo hemos pasado pero en "ngOnInit()" para que se lo guarde desde el principio.<code>this.movie = this.pasarDatos.movie;</code>
+                    Simplemente se crea un servicio con un objeto, se le pasa el objeto a la instancia creada por este componente y se cambia de ruta: <code>this.pasarDatos.movie = this.movies[i];</code> <br>
+                    Luego para recabar el objeto desde el otro componente se hace igual que cuando se lo hemos pasado pero en "ngOnInit()" para que se lo guarde desde el principio: <code>this.movie = this.pasarDatos.movie;</code>
                 </li>
             </ul>
         </section>
@@ -195,7 +195,7 @@
             <h3>Evento Extra</h3>
             <ul>
                 <li>ENTER PARA BUSCAR: <br>
-                    Esta funcionalidad no es m&aacute;s que un <span class="nombreArchivo">(keydown)="onKeyDown($event)"</span> que  llama a la funci&oacute;n "getMovies()" si es la tecla "Enter" <br>
+                    Esta funcionalidad no es m&aacute;s que un <span class="nombreArchivo">(keydown)="onKeyDown($event)"</span> que  llama a la funci&oacute;n "getMovies()" si es la tecla "Enter". <br>
                     El c&oacute;digo en Typescript es: <br>
                     <pre [innerHTML]="keyDown"></pre></li>
             </ul>
