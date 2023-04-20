@@ -15,13 +15,15 @@ import { FormsModule } from '@angular/forms';
 
 // INICIO PRIMENG
 import { ButtonModule } from 'primeng/button';
+import { DocumentacionComponent } from './components/documentacion/documentacion.component';
 // FIN PRIMENG
 
 @NgModule({
   declarations: [
     AppComponent,
     ListadoComponent,
-    DetalleComponent
+    DetalleComponent,
+    DocumentacionComponent
   ],
   imports: [
     BrowserModule,

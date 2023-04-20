@@ -1,0 +1,205 @@
+<div class="main">
+    <div class="foto">
+      <h1>T&iacute;tulo</h1>
+      <img class="img" src="../../../assets/photos/FotoCorporativa.jpg" alt="">
+    </div>
+    <h2>&Iacute;ndice</h2> <br>
+    <ol>
+        <li><a class="eTit">Arquitectura</a></li>
+        <ul>
+            <li><a class="eSubtit">Ventana Lista</a></li>
+            <li><a class="eSubtit">Ventana Detalle</a></li>
+            <li><a class="eSubtit">Ventana Documentaci&oacute;n</a></li>
+        </ul> <br>
+        <li><a class="eTit">Estilos</a></li>
+        <ul>
+            <li><a class="eSubtit">Gradient</a></li>
+            <li><a class="eSubtit">Color Valoraci&oacute;n</a></li>
+            <li><a class="eSubtit">PrimeNG</a></li>
+        </ul> <br>
+        <li><a class="eTit">Angular</a></li>
+        <ul>
+            <li><a class="eSubtit">Environments</a></li>
+            <li><a class="eSubtit">Peticiones a BD</a></li>
+            <li><a class="eSubtit">Servicios</a></li>
+            <li><a class="eSubtit">Navegaci&oacute;n</a></li>
+            <li><a class="eSubtit">Tratamiento de datos</a></li>
+        </ul> <br>
+        <li><a class="eTit">Funcionalidades</a></li>
+        <ul>
+            <li><a class="eSubtit">Evento Extra</a></li>
+        </ul>
+    </ol>
+
+    <div><br><br><br><br><br><br><br><br><br><br></div>
+
+    <div>
+        <h2>Arquitectura</h2>
+        <section>
+            <h4>La arquitectura HTML de este proyecto consta de 3 ventanas, una para la lista de pel&iacute;culas, otra para ver m&aacute;s detalles de la pel&iacute;cula seleccionada y la que est&aacute; observando que explica c&oacute;mo se ha creado el proyecto.</h4>
+        </section>
+        <section>
+            <h3>Ventana Lista</h3>
+            <ul>
+                <li>Con: <code [innerHTML]="ngIf1"></code> se consigue que si no hay pel&iacute;culas en el objeto donde est&aacute;n guardadas para mostrarse, se visualice la imagen de OKODE Digital Transformation.</li>
+                <li>Con: <code [innerHTML]="ngFor"></code> se consigue recorrer mediante un bucle todas las pel&iacute;culas que nos ofrece la BD y as&iacute; se van mostrando en la base de datos.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Ventana Detalle</h3>
+            <ul>
+                <li>Con: <code [innerHTML]="ngIf2"></code> se consigue que si se recarga la p&aacute;gina y se pierden los datos de la pel&iacute;cula seleccionada no se muestre nada, para solucionar los errores de visionado del documento</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Ventana Documentaci&oacute;n</h3>
+            <ul>
+                <li>Esta es la ventana que se muestra en este momento.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div><br><br><br><br><br><br><br><br><br><br></div>
+
+    <div>
+        <h2>Estilos</h2>
+        <section>
+            <h4>Los estilos de este proyecto son lo que le da un mejor aspecto visual a este proyecto, he usado gradientes, combinaciones de fotograf&iacute;as/colores y una biblioteca externa(PrimeNG).</h4>
+        </section>
+        <section>
+            <h3>Gradient</h3>
+                <ul>
+                    <li>El gradiente es la raz&oacute;n entre la variaci&oacute;n del valor de una magnitud en dos puntos pr&oacute;ximos y la distancia que los separa, el c&oacute;digo CSS es:
+                        <pre [innerHTML]="gradient"></pre> <br>
+                        Y est&aacute; sacado de <a class="linkBibliografia" href="https://uigradients.com/#IbizaSunset">https://uigradients.com/#IbizaSunset.</a>
+                    </li>
+                </ul>
+        </section>
+        <section>
+            <h3>Color Valoraci&oacute;n</h3>
+            <ul>
+                <li>El color de la valoraci&oacute;n que he usado se actualiza en funci&oacute;n de la nota obtenida por los usuarios.</li>
+                <li>El c&oacute;digo HTML es:
+                    <pre [innerHTML]="colValHTML"></pre>
+                </li>
+                <li>El m&eacute;todo que cambia la foto del fondo en Typescript es:
+                    <pre [innerHTML]="colValMet"></pre>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>PrimeNG</h3>
+            <ul>
+                <li>El bot&oacute;n "Volver" en la ventana de detalle est&aacute; hecho con una libreria llamada PrimeNG, se importa y se usa, tan sencillo como eso. El c&oacute;digo HTML es:
+                    <pre [innerHTML]="PrimeNG"></pre>
+                </li>
+                <li>El bot&oacute;n "Documentation" en la ventana de listado tamb&iacute;en est&aacute; hecho de esta forma. <br><br></li>
+                <li>El c&oacute;digo Typescript que es llamado por el evento "(click)" es:
+                    <pre [innerHTML]="volver"></pre>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div><br><br><br><br><br><br><br><br><br><br></div>
+
+    <div>
+        <h2>Angular</h2>
+        <section>
+            <h4>En este apartado se explica lo referente al framework de desarrollo(Angular).</h4>
+        </section>
+        <section>
+            <h3>Environments</h3>
+            <ul>
+                <li><span class="nombreArchivo">Environments.ts</span> es el archivo donde se encuentran las variables de entorno y as&iacute; es como se forma la parte de la url que no cambia.</li>
+                <li>Se encuentra en la ruta "./src/environments".</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Peticiones a BD</h3>
+            <ul>
+                <li>Junto con la constante API_URL(del archivo <span class="nombreArchivo">Environments.ts</span>) se concatena el prompt del texto mediante la variable "query" usando el m&eacute;todo getMovies():
+                <pre [innerHTML]="getMovies"></pre>
+                    (He obviado la sintaxis Typescript en algunos lugares para que no se detecte como variable)
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Servicios</h3>
+            <ul>
+                <li>CARGAR SCRIPTS: <br>
+                    Esta es una forma de importar scripts que se me ocurri&oacute; para facilitar la forma de importar archivos y hacer que el HTML quede m&aacute;s organizado y limpio. <br>
+                    Consiste en un m&eacute;todo en Typescript:
+                    <pre [innerHTML]="cargaScripts"></pre>
+                    Al cual se llama importando el archivo Typescript desde el constructor del componente que queremos que importe dicho archivo JavaScript. <br>
+                    (Finalmente solo lo he usado en la Documentaci&oacute;n pero es perfectamente utilizable)
+                </li>
+            </ul>
+            <ul>
+                <li>PASAR DATOS: <br>
+                    De esta forma tan sencilla he pasado los datos de una ventana a otra: <br>
+                    Simplemente se crea un servicio con un objeto, se le pasa el objeto a la instancia creada por este componente y se cambia de ruta. <code>this.pasarDatos.movie = this.movies[i];</code> <br>
+                    Luego para recabar el objeto desde el otro componente se hace igual que cuando se lo hemos pasado pero en "ngOnInit()" para que se lo guarde desde el principio.<code>this.movie = this.pasarDatos.movie;</code>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Navegaci&oacute;n</h3>
+            <ul>
+                <h4>La sintaxis es: <code [innerHTML]="navigate"></code>. <br>
+                En todos los casos se puede usar el redireccionado con las flechas del navegador o atajos de teclado.</h4>
+            </ul>
+            <ul>
+                <li>LISTADO-DETALLE: <br>
+                    Para pasar del listado al detalle de la pel&iacute;cula se utiliza un evento en el marco de la lista de la pel&iacute;cula seleccionada, el cambio de ruta se ejecuta despu&eacute;s del paso de los datos de la misma.
+                </li>
+            </ul>
+            <ul>
+                <li>DETALLE-LISTADO: <br>
+                    Para pasar del detalle al listado se puede hacer de dos maneras, con el bot&oacute;n "Volver" y con la comprobaci&oacute;n en "ngOnInit()" de si el objeto est&aacute; vac&iacute;o al recargar la p&aacute;gina. <br>
+                    Esta &uacute;ltima se puede quitar porque para eso est&aacute; el "*ngIf" en el HTML del componente.
+                </li>
+            </ul>
+            <ul>
+                <li>LISTADO-DOCUMENTACI&Oacute;N: <br>
+                    Mediante el bot&oacute;n "Documentation".
+                </li>
+            </ul>
+            <ul>
+                <li>DOCUMENTACI&Oacute;N-LISTADO: <br>
+                    Usando las flechas del navegador o atajos de teclado.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Tratamiento de datos</h3>
+            <ul>
+                <li>Esto es c&oacute;mo se modifican los datos para poder mostrarlos tal y como queremos. <br>
+                    En este proyecto decid&iacute; quitarle un decimal a la nota m&aacute;s alta(10) y dos decimales a las dem&aacute;s, para representarlas mejor en el c&iacute;rculo de valoraciones. <br>
+                    Tambi&eacute;n puse en may&uacute;sculas las letras del idioma de cada pel&iacute;cula. <br>
+                    Esto se hace en el m&eacute;todo "getMovies()"(cuando se reciben los datos) y la sintaxis de todo en Typescript es:
+                    <pre [innerHTML]="trataDatos"></pre>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div><br><br><br><br><br><br><br><br><br><br></div>
+
+    <div>
+        <h2>Funcionalidades</h2>
+        <section>
+            <h4>En este apartado mostraré alguna funcionalidad que he agregado porque me ha parecido muy &uacute;til.</h4>
+        </section>
+        <section>
+            <h3>Evento Extra</h3>
+            <ul>
+                <li>ENTER PARA BUSCAR: <br>
+                    Esta funcionalidad no es m&aacute;s que un <span class="nombreArchivo">(keydown)="onKeyDown($event)"</span> que  llama a la funci&oacute;n "getMovies()" si es la tecla "Enter" <br>
+                    El c&oacute;digo en Typescript es: <br>
+                    <pre [innerHTML]="keyDown"></pre></li>
+            </ul>
+        </section>
+    </div>
+    <div><br><br><br><br><br><br><br><br></div>
+</div>

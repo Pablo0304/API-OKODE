@@ -12,7 +12,7 @@ export class DetalleComponent {
 
   movie: any;
 
-  constructor( private _CargaScripts:CargaScriptsService, private router: Router, private pasarDatos: PasarDatosService ){
+  constructor( private _CargaScripts: CargaScriptsService, private router: Router, private pasarDatos: PasarDatosService ){
     //_CargaScripts.Carga(["scripts"]);
   }
 

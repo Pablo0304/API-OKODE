@@ -28,7 +28,7 @@ export class ListadoComponent {
           if (response.results[a].vote_average == 10) {
             response.results[a].vote_average = response.results[a].vote_average.toFixed(0);   // Si es 10 quitar dos decimales
           }else{response.results[a].vote_average = response.results[a].vote_average.toFixed(1);}   // Si es otra cosa quitar 1
-          response.results[a].original_language = response.results[a].original_language.toUpperCase();
+          response.results[a].original_language = response.results[a].original_language.toUpperCase();   // Idioma en mayúsculas
         }
         // FIN CAMBIAR CAMPOS
 
@@ -63,6 +63,12 @@ export class ListadoComponent {
 
     // INICIO CAMBIAR RUTA
     this.router.navigate(['/movie']);
+    // FIN CAMBIAR RUTA
+  }
+
+  docu(){
+    // INICIO CAMBIAR RUTA
+    this.router.navigate(['/documentation']);
     // FIN CAMBIAR RUTA
   }
 
